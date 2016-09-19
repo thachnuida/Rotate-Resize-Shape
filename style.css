@@ -1,0 +1,41 @@
+.draw-area {
+    border: 1px solid #000;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.draw-area div {
+    position: absolute;
+}
+
+.rect {
+    background: blue;
+    border: 3px solid #ccc;
+    border-top-color: #c0392b;
+    border-bottom-color: #9b59b6;
+    border-right-color: #27ae60;
+    border-left-color: #2980b9;
+}
+
+.origin-rect {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/*.test-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+.old-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(251, 72, 3, 0.8);
+    margin-left: -5px;
+    margin-top: -5px;
+}*/
