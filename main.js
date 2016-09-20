@@ -68,25 +68,25 @@ function calRotatePoint(point, width, height, rotate, type) {
  * @param {String} type: type of anchor point
  * @return {Object} {top, left} new position of shape that will keep the anchor point after resize
  */
-function calNewPositionAfterResize(rotatedPoint, newWidth, newHeight, rotate, type) {
+function calNewPositionAfterResize(anchorPoint, newWidth, newHeight, rotate, type) {
     var rad = rotate * Math.PI / 180;
     var newTop, newLeft;
     switch (type) {
         case 'top-left':
-            newTop = newWidth/2 * Math.sin(rad) + newHeight/2 * Math.cos(rad) - newHeight/2 + rotatedPoint.top;
-            newLeft = newWidth/2 * Math.cos(rad) - newHeight/2 * Math.sin(rad) - newWidth/2 + rotatedPoint.left;
+            newTop = newWidth/2 * Math.sin(rad) + newHeight/2 * Math.cos(rad) - newHeight/2 + anchorPoint.top;
+            newLeft = newWidth/2 * Math.cos(rad) - newHeight/2 * Math.sin(rad) - newWidth/2 + anchorPoint.left;
             break;
         case 'top-right': 
-            newTop = -newWidth/2 * Math.sin(rad) + newHeight/2 * Math.cos(rad) - newHeight/2 + rotatedPoint.top;
-            newLeft = -newWidth/2 * Math.cos(rad) - newHeight/2 * Math.sin(rad) - newWidth/2 + rotatedPoint.left;
+            newTop = -newWidth/2 * Math.sin(rad) + newHeight/2 * Math.cos(rad) - newHeight/2 + anchorPoint.top;
+            newLeft = -newWidth/2 * Math.cos(rad) - newHeight/2 * Math.sin(rad) - newWidth/2 + anchorPoint.left;
             break;
         case 'bottom-left': 
-            newTop = newWidth/2 * Math.sin(rad) - newHeight/2 * Math.cos(rad) - newHeight/2 + rotatedPoint.top;
-            newLeft = newWidth/2 * Math.cos(rad) + newHeight/2 * Math.sin(rad) - newWidth/2 + rotatedPoint.left;
+            newTop = newWidth/2 * Math.sin(rad) - newHeight/2 * Math.cos(rad) - newHeight/2 + anchorPoint.top;
+            newLeft = newWidth/2 * Math.cos(rad) + newHeight/2 * Math.sin(rad) - newWidth/2 + anchorPoint.left;
             break;
         case 'bottom-right': 
-            newTop = -newWidth/2 * Math.sin(rad) - newHeight/2 * Math.cos(rad) - newHeight/2 + rotatedPoint.top;
-            newLeft = -newWidth/2 * Math.cos(rad) + newHeight/2 * Math.sin(rad) - newWidth/2 + rotatedPoint.left;
+            newTop = -newWidth/2 * Math.sin(rad) - newHeight/2 * Math.cos(rad) - newHeight/2 + anchorPoint.top;
+            newLeft = -newWidth/2 * Math.cos(rad) + newHeight/2 * Math.sin(rad) - newWidth/2 + anchorPoint.left;
             break;
 
     }
