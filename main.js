@@ -65,6 +65,8 @@ function calRotatePoint(point, width, height, rotate, type) {
 
 /**
  * Caculate new Top, Left of shape after resize when being rotated
+ * @param {String} type: type of anchor point
+ * @return {Object} {top, left} new position of shape that will keep the anchor point after resize
  */
 function calNewPositionAfterResize(rotatedPoint, newWidth, newHeight, rotate, type) {
     var rad = rotate * Math.PI / 180;
